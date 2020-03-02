@@ -13,7 +13,7 @@ div {
   border-left: 6px solid #f44336;
 }
 
-.success {
+.ref {
   background-color: #ddffdd;
   border-left: 6px solid #4CAF50;
 }
@@ -27,6 +27,8 @@ div {
   background-color: #ffffcc;
   border-left: 6px solid #ffeb3b;
 }
+
+
 
 
 
@@ -103,6 +105,37 @@ div {
         neighbor algorithm internally and this algorithm is sensitive to input variables with different scales.
         Therefore, we will require the data to be normalized as a first step, then sampled, then used as input to the
         (unbalanced) logistic regression model.
+    </p>
+</div>
+
+<div class="info">
+    <p>
+        <strong>Explain SMOTE and ENN</strong>
+        <br>
+        ???
+    </p>
+</div>
+
+<div class="imp">
+    <p>
+        <strong>ReLU is better than Sigmoid</strong>
+        <br>
+        Because ReLU learns continuously for positive examples. max(0, x)
+        Sigmoid learning curve is very small and stagnant for large number of area.
+    </p>
+</div>
+
+<div class="ref">
+    <p>
+        <strong>References:</strong>
+    <br>
+    <ol>
+        <li>
+            <a href="https://machinelearningmastery.com/imbalanced-classification-model-to-detect-oil-spills/">
+                Imbalanced Classifier - MLM
+            </a>
+        </li>
+    </ol>
     </p>
 </div>
 
