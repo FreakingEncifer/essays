@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 div {
   margin-bottom: 15px;
   padding: 4px 12px;
 }
 
-.danger {
+.imp {
   background-color: #ffdddd;
   border-left: 6px solid #f44336;
 }
@@ -23,30 +23,87 @@ div {
   border-left: 6px solid #2196F3;
 }
 
-
 .warning {
   background-color: #ffffcc;
   border-left: 6px solid #ffeb3b;
 }
-</style>
+
+
+
+
+
+    </style>
 </head>
 <body>
 
-<h2>Notes</h2>
-<div class="danger">
-  <p><strong>Danger!</strong> Some text...</p>
-</div>
+<h2>Machine Learning Notes/Experiences</h2>
+<h3>Collected by reading blogs</h3>
 
-<div class="success">
-  <p><strong>Success!</strong> Some text...</p>
+<div class="info">
+    <p>
+        <strong>How to evaluate an imbalanced classifier?</strong>
+        <br>
+        One way to evaluate imbalanced classification models
+        that predict crisp labels is to calculate the separate accuracy on the positive class and the negative class,
+        referred to as sensitivity and specificity. These two measures can then be averaged using the geometric mean,
+        referred to as the G-mean, that is insensitive to the skewed class distribution and correctly reports on the
+        skill of the model on both classes.
+    </p>
 </div>
 
 <div class="info">
-  <p><strong>Info!</strong> Some text...</p>
+    <p>
+        <strong>How to choose k in k-cross validation?</strong>
+        <br>
+        Three common tactics for choosing a value for k are as follows:
+    <ol>
+        <li>Representative: The value for k is chosen such that each train/test group of data samples is large enough to
+            be statistically representative of the broader dataset.
+        </li>
+        <li>k=10: The value for k is fixed to 10, a value that has been found through experimentation to generally
+            result in a model skill estimate with low bias a modest variance.
+        </li>
+        <li>k=n: The value for k is fixed to n, where n is the size of the dataset to give each test sample an
+            opportunity to be used in the hold out dataset. This approach is called leave-one-out cross-validation.
+        </li>
+    </ol>
 </div>
 
-<div class="warning">
-  <p><strong>Warning!</strong> Some text...</p>
+<div class="info">
+    <p>
+        <strong>Variations in k-CV</strong>
+        <br>
+    <ol>
+        <li>Train/Test Split: Taken to one extreme, k may be set to 2 (not 1) such that a single train/test split is
+            created to evaluate the model.
+        </li>
+        <li>LOOCV: Taken to another extreme, k may be set to the total number of observations in the dataset such that
+            each observation is given a chance to be the held out of the dataset. This is called leave-one-out
+            cross-validation, or LOOCV for short.
+        </li>
+        <li>Stratified: The splitting of data into folds may be governed by criteria such as ensuring that each fold has
+            the same proportion of observations with a given categorical value, such as the class outcome value. This is
+            called stratified cross-validation.
+        </li>
+        <li>Repeated: This is where the k-fold cross-validation procedure is repeated n times, where importantly, the
+            data sample is shuffled prior to each repetition, which results in a different split of the sample.
+        </li>
+    </ol>
+    </p>
+</div>
+
+<div class="imp">
+    <p>
+        <strong>SMOTE-ENN - Synthetic Minority Over-sampling Technique</strong>
+        <br>
+        It is an oversampling technique for creating new synthetic examples for the minority class. This can be paired
+        with the Edited Nearest Neighbor (ENN) algorithm that will locate and remove examples from the dataset that are
+        ambiguous, making it easier for models to learn to discriminate between the two classes. SMOTE and ENN both work
+        better when the input data is scaled beforehand. This is because both techniques involve using the nearest
+        neighbor algorithm internally and this algorithm is sensitive to input variables with different scales.
+        Therefore, we will require the data to be normalized as a first step, then sampled, then used as input to the
+        (unbalanced) logistic regression model.
+    </p>
 </div>
 
 </body>
