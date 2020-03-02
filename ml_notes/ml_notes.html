@@ -28,6 +28,7 @@
           border-left: 6px solid #ffeb3b;
         }
 
+
     </style>
 </head>
 <body>
@@ -44,6 +45,29 @@
         referred to as sensitivity and specificity. These two measures can then be averaged using the geometric mean,
         referred to as the G-mean, that is insensitive to the skewed class distribution and correctly reports on the
         skill of the model on both classes.
+    </p>
+</div>
+
+
+<div class="imp">
+    <p>
+        <strong>Formulae to evaluate an imbalanced classifier?</strong>
+        <br>
+        Recall that the sensitivity is a measure of the accuracy for the positive class and specificity is a measure of
+        the accuracy of the negative class.
+    <ul>
+        <li>
+            Sensitivity = TruePositives / (TruePositives + FalseNegatives)
+        </li>
+        <li>
+            Specificity = TrueNegatives / (TrueNegatives + FalsePositives)
+        </li>
+
+    </ul>
+    The G-mean seeks a balance of these scores, the geometric mean, where poor performance for one or the other results
+    in a low G-mean score.
+    <br>
+    <strong>G-Mean = sqrt(Sensitivity * Specificity)</strong>
     </p>
 </div>
 
@@ -130,6 +154,14 @@
 <div class="info">
     <p>
         <strong>Types of Classification Techniques along with available libraries</strong>
+        <br>
+        ???
+    </p>
+</div>
+
+<div class="warning">
+    <p>
+        <strong>Liblinear Convergence</strong>
         <br>
         ???
     </p>
