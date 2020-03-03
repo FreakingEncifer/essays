@@ -29,6 +29,9 @@
         }
 
 
+
+
+
     </style>
     <title>Machine Learning Notes</title>
 </head>
@@ -41,18 +44,103 @@
     <p>
         <strong>Basic Machine Learning Problem Solving Process (BMLPSP)</strong>
         <br>
+        The following content is taken from Machine Learning Mastery website
         This might be specific w.r.t. Time Series Forecasting but the concepts are general enough.
         General points to remember: Don't skip steps. Don't be sloppy. Keep the code clean and parameterized. Make the
         test-harness handy.
     <ol>
         <li>
-            Define Problem
+            <strong> Define Problem: </strong> <br>
+            We can find answers for the following questions with the help of Data Visualizations,
+            ACF/PACF plots, domain experts, stakeholders, etc.
+            <ol>
+                <li>
+                    What are the inputs and outputs for a forecast?
+                </li>
+                <li>
+                    What are the endogenous and exogenous variables?
+                </li>
+                <li>
+                    Are the time series variables unstructured or structured?
+                </li>
+                <li>
+                    Are you working on a regression or classification predictive modeling problem?
+                </li>
+                <li>
+                    What are some alternate ways to frame your time series forecasting problem?
+                </li>
+                <li>
+                    Are you working on a univariate or multivariate time series problem?
+                </li>
+                <li>
+                    Do you require a single-step or a multi-step forecast?
+                </li>
+                <li>
+                    Do you require a static or a dynamically updated model?
+                </li>
+            </ol>
         </li>
         <li>
-            Design Test Harness
+            <strong>Design Test Harness</strong><br>
+            The test harness should be robust enough to estimate the model performance for comparison using some
+            metrics.
+            <ol>
+                <li>
+                    Split the dataset into a train and test set.
+                </li>
+                <li>
+                    Fit a candidate approach on the training dataset.
+                </li>
+                <li>
+                    Make predictions on the test set directly or using walk-forward validation.
+                </li>
+                <li>
+                    Calculate a metric that compares the predictions to the expected values.
+                </li>
+            </ol>
         </li>
         <li>
-            Test Models
+            <strong>Test Models:</strong><br>
+            <ol>
+                <li>
+                    Baseline.
+                </li>
+            </ol>
+            Persistence (grid search the lag observation that is persisted)
+            Rolling moving average.
+
+            Autoregression.
+            ARMA for stationary data.
+            ARIMA for data with a trend.
+            SARIMA for data with seasonality.
+
+            Exponential Smoothing.
+            Simple Smoothing
+            Holt Winters Smoothing
+
+            Linear Machine Learning.
+            Linear Regression
+            Ridge Regression
+            Lasso Regression
+            Elastic Net Regression
+
+            Nonlinear Machine Learning.
+            k-Nearest Neighbors
+            Classification and Regression Trees
+            Support Vector Regression
+
+            Ensemble Machine Learning.
+            Bagging
+            Boosting
+            Random Forest
+            Gradient Boosting
+
+            Deep Learning.
+            MLP
+            CNN
+            LSTM
+            Hybrids
+
         </li>
         <li>
             Finalize Model
